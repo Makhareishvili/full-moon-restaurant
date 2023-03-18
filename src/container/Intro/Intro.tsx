@@ -6,7 +6,7 @@ import { useRef, useState } from "react";
 
 const Intro = () => {
   const [playVideo, setPlayVideo] = useState(false);
-  const vidRef = useRef<HTMLVideoElement>();
+  const vidRef = useRef<HTMLVideoElement>(null);
 
   const handleVideo = () => {
     setPlayVideo((current) => !current);
@@ -21,7 +21,7 @@ const Intro = () => {
       <video
         src={hannibal}
         ref={vidRef}
-        type="video/mp4"
+        // type="video/mp4"
         loop
         controls={false}
         // muted
